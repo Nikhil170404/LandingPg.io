@@ -1,0 +1,538 @@
+/* General body styling */
+body {
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header and Navbar */
+header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff3d00;
+}
+
+.navbar-toggler {
+    display: none;
+    border: none;
+    background: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    display: block;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.navbar-toggler-icon::before {
+    top: -10px;
+}
+
+.navbar-toggler-icon::after {
+    top: 10px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+#main-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#main-menu li {
+    margin: 0 10px;
+}
+
+#main-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+#main-menu li a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #ff3d00;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+#main-menu li a:hover::after {
+    width: 100%;
+}
+
+#main-menu li a:hover {
+    color: #ff3d00;
+}
+
+.download-button {
+    background: #ff3d00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background: #e33d00;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    background-repeat: no-repeat;
+    background-image: url('/assets/images/Group 1000002356.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 20px 10px 20px 0;
+    background: #ff3d00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-text button:hover {
+    background: #e33d00;
+}
+
+.hero-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Common section styling */
+section {
+    padding: 50px 0;
+    text-align:center;
+}
+
+.features-grid,
+.advantages-grid,
+.faq-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature,
+.advantage,
+.faq-item {
+    flex: 1;
+    max-width: 45%;
+    margin: 20px 10px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature img,
+.advantage img,
+.faq-item img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-column button {
+    padding: 10px 20px;
+    background: #ff3d00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-column button:hover {
+    background: #e33d00;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    #main-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #main-menu.show {
+        display: flex;
+    }
+
+    #main-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #main-menu li a {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-grid,
+    .advantages-grid,
+    .faq-grid {
+        flex-direction: column;
+    }
+
+    .feature,
+    .advantage,
+    .faq-item {
+        max-width: 100%;
+    }
+}
+
+.hero-image img {
+    max-width: 35%;
+    height: auto;
+    width: auto; /* Added to ensure the image doesn't exceed its container */
+}
+
+.testimonial-img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensure the image covers the circular area */
+    margin-bottom: 10px; /* Add some space below the image */
+    border: 3px solid black; /* Add black outline */
+}
+
+/* Common image styles */
+img {
+    max-width: 100%; /* Ensures images don't exceed container width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Large images for desktop */
+@media (min-width: 769px) {
+    img.large {
+        width: 100%; /* Take full width of container */
+        max-height: 500px; /* Adjust maximum height as needed */
+    }
+}
+
+/* Small images for mobile */
+@media (max-width: 768px) {
+    img.small {
+        width: 100%; /* Take full width of container */
+        max-height: 300px; /* Adjust maximum height as needed */
+    }
+}
+
+.hero-image {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+/* Optional: Adjust the spacing between individual images */
+.hero-image img {
+    margin-right: -190px; /* Remove right margin */
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-image img {
+    max-width: 100%; /* Ensure image responsiveness */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjust image spacing for different screen sizes */
+@media (max-width: 768px) {
+    .hero-image img {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 20px; /* Add bottom margin for better spacing */
+    }
+}
+
+.feature img, .advantage img, .faq-item img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: -20px;
+}
+
+/* Add background behind all images */
+
+/* Adjust image spacing for different screen sizes */
+@media (max-width: 768px) {
+    .container img {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 20px; /* Add bottom margin for better spacing */
+    }
+}
+
+#testimonials {
+    background-image: url('/assets/images/Group 1000002356.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+/* Dark mode styles */
+body {
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+    scroll-behavior: smooth;
+    background-color: #f4f4f4; /* Default background color */
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #1a202c; /* Dark mode background color */
+    color: #ffffff; /* Dark mode text color */
+}
+
+/* Header and Navbar */
+header {
+    background: #fff; /* Default header background */
+}
+
+/* Dark mode styles for header */
+.dark-mode header {
+    background: #1a202c; /* Dark mode header background */
+}
+
+/* Navbar toggler icon color in dark mode */
+.dark-mode .navbar-toggler-icon,
+.dark-mode .navbar-toggler-icon::before,
+.dark-mode .navbar-toggler-icon::after {
+    background-color: #fff; /* Toggler icon color in dark mode */
+}
+
+/* Main menu links color in dark mode */
+.dark-mode #main-menu li a {
+    color: #fff; /* Menu links color in dark mode */
+}
+
+/* Toggle button color in dark mode */
+.dark-mode .download-button,
+.dark-mode .dark-mode-toggle {
+    background-color: #ff3d00; /* Button background color in dark mode */
+    color: #fff; /* Button text color in dark mode */
+}
+
+/* Dark mode styles for hero section */
+.dark-mode .hero-text h1,
+.dark-mode .hero-text p,
+.dark-mode .hero-text button {
+    color: #fff; /* Hero text color in dark mode */
+}
+
+/* Feature and advantage section text color in dark mode */
+.dark-mode .feature,
+.dark-mode .advantage,
+.dark-mode .faq-item {
+    color: #fff; /* Feature and advantage section text color in dark mode */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White shadow in dark mode */
+}
+
+/* Footer */
+footer {
+    background: #333; /* Default footer background */
+}
+
+/* Dark mode styles for footer */
+.dark-mode footer {
+    background: #1a202c; /* Dark mode footer background */
+}
+
+/* Footer text color in dark mode */
+.dark-mode footer,
+.dark-mode footer .footer-column h3,
+.dark-mode footer .footer-column ul li a,
+.dark-mode footer .footer-column input[type="email"],
+.dark-mode footer .footer-column button {
+    color: #fff; /* Footer text color in dark mode */
+}
+
+/* Transition for smooth theme change */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    color: #333; /* Default icon color */
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #555; /* Hover color */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #ffffff; /* Icon color in dark mode */
+}
